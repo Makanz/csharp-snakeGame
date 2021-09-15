@@ -36,11 +36,11 @@ namespace SnakeGame
             {
                 goRight = true;
             }
-            if (e.KeyCode == Keys.Up && Settings.directions != "Down")
+            if (e.KeyCode == Keys.Up && Settings.directions != "down")
             {
                 goUp = true;
             }
-            if (e.KeyCode == Keys.Down && Settings.directions != "Up")
+            if (e.KeyCode == Keys.Down && Settings.directions != "up")
             {
                 goDown = true;
             }
@@ -293,7 +293,7 @@ namespace SnakeGame
             food = new Circle { X = rnd.Next(2, maxWidth), Y = rnd.Next(2, maxHeight) };
 
             // Prevent food from spawn on snake
-            for(int i=0;i < Snake.Count;i++)
+            for (int i = 0; i < Snake.Count; i++)
             {
                 if (Snake[i].X == food.X && Snake[i].Y == food.Y)
                 {
